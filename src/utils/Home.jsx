@@ -3,7 +3,7 @@ import mark from "../assets/img/mark.jpg";
 import '../assets/scss/_home.scss';
 const homeText = {
     title: "Passionate     Developer",
-    desc: ["SI YEON PARK"],
+    desc: ["Su Min Lee"],
 };
 
 const Home = () => {

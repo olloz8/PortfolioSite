@@ -2,12 +2,12 @@ import React from "react";
 
 const contactlink = [
     {
-        link: "mailto:202244018@itc.ac.kr", // mailto 링크 추가
-        title: "mail : 202244018@itc.ac.kr",
+        link: "mailto:202244028@itc.ac.kr", // mailto 링크 추가
+        title: "mail : 202244028@itc.ac.kr",
     },
     {
-        link: "https://github.com/siyeoncoding/FrontEnd", // 깃허브 링크
-        title: "GitHub: siyeoncoding",
+        link: "https://github.com/olloz8", // 깃허브 링크
+        title: "GitHub: olloz8",
     },
 ];
 
