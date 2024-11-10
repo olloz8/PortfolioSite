@@ -2,7 +2,7 @@
 import React from "react";
 import Header from "./Header";
 import '../assets/scss/_stack.scss';
-import stack1 from "../assets/img/stack1.jpg";
+import stack1 from "../assets/img/stack2.png";
 
 const STACK_INTRODUCE = [
     {

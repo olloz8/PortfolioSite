@@ -59,7 +59,7 @@
       text-transform: uppercase;
       text-align: center;
       position: relative;
-      margin-top: 2vh;
+      margin-top: 1vh;
 
       @media (max-width: 800px) {
         font-size: 24px;
@@ -67,13 +67,14 @@
     }
 
     .img {
-      width: 30vh;
-      height: 30vh;
+      width: 35vh;
+      height: 35vh;
       border-radius: 50%;
       overflow: hidden;
       filter: grayscale(100%);
       transition: all 0.3s;
-      margin-bottom: 2vh;
+      margin-bottom: 5vh;
+      margin-top: 5vh;
 
       @media (max-width: 320px) {
         width: 20vh;

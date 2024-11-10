@@ -17,17 +17,15 @@ const Home = () => {
                     <span className="line"></span>
                     <span className="line"></span>
                     <span className="line"></span>
-                    <span className="line"></span>
-                    <span className="line"></span>
                 </div>
                 <div className="home__text">
-                    <div className="text">
+                <div className="text">
                         <div>{homeText.desc[0]}</div>
                         <div>{homeText.desc[1]}</div>
                         <div>{homeText.desc[2]}</div>
                     </div>
                     <div className="img">
-                        <img src={mark} alt="내가그린그림" />
+                        <img src={mark} alt="내가그린그림"/>
                     </div>
                 </div>
                 <div className="home__lines bottom" aria-hidden="true">

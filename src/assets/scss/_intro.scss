@@ -1,41 +1,105 @@
+// src/assets/scss/_intro.scss
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+@font-face {
+  font-family: Sunflower;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../font/MADE Sunflower PERSONAL USE.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  font-style: normal;
+  font-weight: normal;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-display: swap;
+}
+
+// 폰트 변수 정의
+$primary-font: 'Inter', sans-serif;
+$secondary-font: 'Sunflower', sans-serif;
+$tertiary-font: 'Chosunilbo_myungjo', serif;
+
+body {
+  font-family: $tertiary-font; // 모든 텍스트에 Chosunilbo_myungjo 폰트 적용
+  background-color: rgba(116, 99, 99, 0.1); // 배경색 변경
+}
+
 #intro {
-  padding-top: 100px;  // 헤더 크기에 맞게 여백을 설정 (조정 가능)
-  text-align: center;   // 모든 텍스트 중앙 정렬
+  padding: 50px 20px;
+  text-align: center;
 }
 
-p {
-  font-size: 1.2em; // 기본 폰트 크기
-  line-height: 1.5; // 줄 간격
-  margin: 10px 0; // 마진
+.intro-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+
 }
 
-strong {
-  display: block;
-  font-size: 1.4em; // 강조 텍스트 크기
-  margin: 20px 0; // 마진
-  color: #333; // 텍스트 색상
+.intro-section {
+  margin-bottom: 30px;
+  p {
+    font-size: 1.2em;
+    color: #555;
+  }
+  strong {
+    display: block;
+    font-size: 1.4em;
+    margin-top: 10px;
+    color: #333;
+  }
 }
 
-h3 {
-  font-size: 1.5em; // 키워드 제목 크기
-  margin-top: 15px; // 마진
-  color: #007bff; // 제목 색상
+.sub-keyword {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #777;
+  span {
+    display: block;
+    font-size: 0.9em;
+    color: #aaa;
+  }
 }
 
-span {
-  display: block;
-  font-size: 1em; // 서브 텍스트 크기
-  color: #666; // 서브 텍스트 색상
-  margin-top: 5px; // 마진
+.keywords-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
 }
 
 .keyword-item {
-  margin: 20px 0; // 키워드 간격
-  text-align: center; // 중앙 정렬
+  flex: 1 1 30%; // 3개 한 줄에 배치
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  text-align: center;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); // 키워드 항목에만 효과 유지
+  }
 
   .keyword-icon {
-    font-size: 2em; // 아이콘 크기
+    font-size: 2em;
     color: #007bff; // 아이콘 색상
-    margin-bottom: 10px; // 아이콘과 텍스트 간격
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: 1em;
+    color: #666;
   }
 }
