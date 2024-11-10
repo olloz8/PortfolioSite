@@ -52,7 +52,7 @@ const Portfolio = () => {
                         <h3>{item.title}</h3>
                         {item.image && (
                             <div className="image"> {/* 클래스 이름 변경 */}
-                                <img src={item.image} alt={item.title} /> {/* 이미지 추가 */}
+                                <img src={item.image} alt={item.title} className="project-image" /> {/* 클래스 추가 */}
                             </div>
                         )}
                         <p>{item.description}</p>

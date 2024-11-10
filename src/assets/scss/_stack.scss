@@ -30,8 +30,17 @@
   }
 }
 
-
-/* _intro.scss */
-#intro {
+/* _stack.scss */
+#stack {
+  text-align: center; /* 텍스트 중앙 정렬 */
   padding-top: 100px;  // 헤더 크기에 맞게 여백을 설정 (조정 가능)
 }
+
+.stack-image {
+  max-width: 700px; /* 최대 너비를 300px로 설정 (필요에 따라 조정 가능) */
+  width: 100%; /* 부모 요소에 맞게 너비 조정 */
+  height: auto; /* 비율 유지 */
+  margin-top: 20px; /* 이미지 위 여백 */
+  margin-bottom: 20px; /* 이미지 아래에 20px 간격 추가 */
+}
+

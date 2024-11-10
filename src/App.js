@@ -5,6 +5,7 @@ import Home from "./utils/Home";
 import Header from "./utils/Header";
 import Contack from "./utils/Contack";
 import Portfolio from "./utils/Portfolio";
+import Stack from "./utils/Stack";
 
 
 const MainView = () => {
@@ -13,6 +14,7 @@ const MainView = () => {
             <Header/>
             <Home/>
             <Intro/>
+            <Stack/>
             <Portfolio/>
             <Contack/>
         </>

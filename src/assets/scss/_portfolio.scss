@@ -1,109 +1,46 @@
-#port {
-  width: 100%;
-  margin-top: 30vh;
-  // overflow: hidden;
-}
+#intro_top {
+  background-color: #f9f9f9; // 배경색
+  padding: 40px 20px; // 패딩
+  text-align: center; // 중앙 정렬
 
-.port__inner {
-  padding: 16px;
-
-  .port__title {
-    width: 100%;
-    height: 5vw;
-    font-size: 4vw;
-    font-weight: 900;
-    line-height: 1.6;
-    font-family: var(--mainKor-font);
-    text-transform: uppercase;
-    color: var(--black100);
-    border-bottom: 0.4vw solid var(--black100);
-    margin-bottom: 16px;
-    text-indent: -0.26vw;
-
-    em {
-      font-size: 1.25rem;
-      font-weight: 400;
-      line-height: 2;
-    }
+  p {
+    font-size: 1.2em; // 기본 폰트 크기
+    line-height: 1.5; // 줄 간격
+    margin: 10px 0; // 마진
   }
 
-  .port__wrap {
-    display: flex;
-    flex-wrap: wrap;
-    width: 7000px;
+  strong {
+    display: block;
+    font-size: 1.4em; // 강조 텍스트 크기
+    margin: 20px 0; // 마진
+    color: #333; // 텍스트 색상
+  }
 
-    .port__item {
-      width: 500px; /* 각 포트폴리오 항목의 너비 */
-      height: auto; /* 높이를 자동으로 설정하여 비율 유지 */
-      background-color: var(--subBg100);
-      padding: 2.5rem;
-      margin-right: 20px;
+  h3 {
+    font-size: 1.5em; // 키워드 제목 크기
+    margin-top: 30px; // 마진
+    color: #007bff; // 제목 색상
+  }
 
-      &.p1 { background-color: var(--subBg100); }
-      &.p2 { background-color: var(--subBg200); }
-      &.p3 { background-color: var(--subBg300); }
-      &.p4 { background-color: var(--subBg400); }
-      &.p5 { background-color: var(--subBg500); }
-      &.p6 { background-color: var(--subBg100); }
-      &.p7 { background-color: var(--subBg200); }
-      &.p8 { background-color: var(--subBg300); }
-      &.p9 { background-color: var(--subBg400); }
-      &.p10 { background-color: var(--subBg500); }
-
-      .num {
-        font-size: 2rem;
-        font-family: var(--mainNum-font);
-      }
-
-      .image {
-        display: block;
-        margin: 0 auto; /* 중앙 정렬 */
-        width: 600px; /* 너비 600px */
-        height: 600px; /* 높이 600px */
-        border-radius: 5px; /* 이미지 모서리 둥글게 */
-        overflow: hidden; /* 이미지가 부모를 넘지 않도록 설정 */
-
-        image {
-          width: 100%; /* 부모 요소에 맞게 너비 조정 */
-          height: 100%; /* 부모 요소에 맞게 높이 조정 */
-          object-fit: cover; /* 비율 유지하며 잘라내기 */
-          transition: transform 0.3s; /* 호버 시 효과 추가 */
-        }
-
-        &:hover {
-          image {
-            transform: scale(1.05); /* 호버 시 확대 효과 */
-          }
-        }
-      }
-
-      .title {
-        font-size: 1.5rem;
-        text-align: center;
-        padding: 0.8rem 0;
-        font-weight: 700;
-        color: var(--black100);
-        border-bottom: 2px solid var(--black100);
-        margin-bottom: 1rem;
-      }
-
-      .desc {
-        font-size: 1rem;
-      }
-
-      .site {
-        border: 1px solid var(--black100);
-        display: block;
-        text-align: center;
-        padding: 0.625rem 1.5rem;
-        margin-top: 1.5rem;
-        transition: all 0.2s;
-
-        &:hover {
-          background-color: var(--black100);
-          color: var(--white);
-        }
-      }
-    }
+  span {
+    display: block;
+    font-size: 1em; // 서브 텍스트 크기
+    color: #666; // 서브 텍스트 색상
+    margin-top: 5px; // 마진
   }
 }
+
+/* _stack.scss */
+#portfolio {
+  text-align: center; /* 텍스트 중앙 정렬 */
+  padding-top: 100px;  // 헤더 크기에 맞게 여백을 설정 (조정 가능)
+}
+
+.project-image {
+  max-width: 700px; /* 최대 너비를 300px로 설정 (필요에 따라 조정 가능) */
+  width: 100%; /* 부모 요소에 맞게 너비 조정 */
+  height: auto; /* 비율 유지 */
+  margin-top: 20px; /* 이미지 위 여백 */
+  margin-bottom: 20px; /* 이미지 아래에 20px 간격 추가 */
+}
+
