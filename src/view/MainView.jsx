@@ -1,10 +1,10 @@
 // MainView.jsx
 import React from "react";
 
-import Intro from "../src/utils/Intro";
-import Home from "./utils/Home";
-import Header from "./utils/Header";
-import Contack from "../utils/Contack";
+import Intro from "../utils/Intro";
+import Home from "../utils/Home";
+import Header from "../utils/Header";
+import Contact from "../utils/Contact";
 import Portfolio from "../utils/Portfolio";
 import Stack from "../utils/Stack";
 
@@ -34,7 +34,7 @@ const MainView = () => {
             <Portfolio/>
 
 
-            <Contack/>
+            <Contact/>
         </>
     );
 };

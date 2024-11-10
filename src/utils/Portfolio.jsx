@@ -1,6 +1,5 @@
 // Portfolio.jsx
 import React from "react";
-import Header from "./Header";
 import '../assets/scss/_portfolio.scss';
 import project_1 from "../assets/img/img1.jpg";
 import project_2 from "../assets/img/img2.jpg";

@@ -19,6 +19,14 @@ const Header = () => {
         setIsMenuVisible((prevVisibility) => !prevVisibility);
     };
 
+    const handleScroll = (e, target) => {
+        e.preventDefault(); // 기본 동작 방지
+        const element = document.querySelector(target);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" }); // 부드럽게 스크롤
+        }
+    };
+
     return (
         <header id="header" role="banner">
             <div className="header__inner">
@@ -32,11 +40,20 @@ const Header = () => {
                     <ul>
                         {navigationItems.map((item, index) => (
                             <li key={index}>
-                                <a href={item.url}>{item.title}</a>
+                                <a
+                                    href={item.url} // href는 그대로 두고
+                                    onClick={(e) => {
+                                        e.preventDefault(); // 기본 동작 방지
+                                        handleScroll(e, item.url); // 부드럽게 스크롤
+                                    }}
+                                >
+                                    {item.title}
+                                </a>
                             </li>
                         ))}
                     </ul>
                 </nav>
+
 
                 {/* 모바일 메뉴 토글 버튼 */}
                 <div
