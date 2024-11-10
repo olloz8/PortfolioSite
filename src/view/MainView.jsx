@@ -5,6 +5,7 @@ import Intro from "../src/utils/Intro";
 import Home from "./utils/Home";
 import Header from "./utils/Header";
 import Contack from "../utils/Contack";
+import Portfolio from "../utils/Portfolio";
 
 // 네비게이션 메뉴 항목 배열
 const navigationItems = [
@@ -22,6 +23,8 @@ const MainView = () => {
             <Home/>
 
             <Intro/>
+
+            <Portfolio/>
 
             <Contack/>
         </>
