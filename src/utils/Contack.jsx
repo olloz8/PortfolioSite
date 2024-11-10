@@ -1,5 +1,5 @@
 import React from "react";
-
+import '../assets/scss/_contact.scss';
 const contactlink = [
     {
         link: "mailto:202244028@itc.ac.kr", // mailto 링크 추가
@@ -16,13 +16,7 @@ const ReachOut = () => {
         <section id="reachOut">
             <div className="reachOut__container">
                 <h2 className="reachOut__heading">연락을 기다리겠습니다.</h2>
-                <div className="reachOut__divider" aria-hidden="true">
-                    <span className="divider__line"></span>
-                    <span className="divider__line"></span>
-                    <span className="divider__line"></span>
-                    <span className="divider__line"></span>
-                    <span className="divider__line"></span>
-                    <span className="divider__line"></span>
+                <div className="reachOut__divider">
                     <span className="divider__line"></span>
                 </div>
                 <div className="reachOut__details">
@@ -35,13 +29,7 @@ const ReachOut = () => {
                         </div>
                     ))}
                 </div>
-                <div className="reachOut__divider bottom" aria-hidden="true">
-                    <span className="divider__line"></span>
-                    <span className="divider__line"></span>
-                    <span className="divider__line"></span>
-                    <span className="divider__line"></span>
-                    <span className="divider__line"></span>
-                    <span className="divider__line"></span>
+                <div className="reachOut__divider bottom">
                     <span className="divider__line"></span>
                 </div>
             </div>

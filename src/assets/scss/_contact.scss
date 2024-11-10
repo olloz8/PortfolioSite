@@ -7,58 +7,30 @@
   height: 100%;
   padding: 20px;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 수평 중앙 정렬 */
   flex-direction: column;
 
   @media (max-width: 800px) {
-    justify-content: center;
     padding: 10px;
   }
 
   .reachOut__heading {
-    font-size: 12vw;
+    font-size: 2vw; /* 폰트 크기 조정 */
     text-transform: uppercase;
     line-height: 1.2;
     font-weight: 700;
-    white-space: nowrap;
-    text-indent: -1vw;
-    letter-spacing: -0.1vw;
-
-    @media (max-width: 800px) {
-      display: none;
-    }
+    margin-bottom: 5px; /* 헤딩 아래의 마진을 줄임 */
   }
 
-  .reachOut__info {
+  .reachOut__details {
     width: 100%;
-    height: 45vh;
-    background-color: var(--dark-gray);
-    color: var(--light-gray);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
+    text-align: center; /* 텍스트 중앙 정렬 */
+    margin-top: 0; /* 제목과 세부 정보 간의 간격을 없앰 */
+  }
 
-    .details {
-      font-size: 4vw;
-      line-height: 1.1;
-      font-weight: 800;
-      text-transform: uppercase;
-      text-decoration: underline;
-      text-align: center;
-      position: relative;
-      z-index: 10;
-      transition: all 0.3s;
-      cursor: pointer;
-
-      @media (max-width: 800px) {
-        font-size: 28px;
-        padding: 0 20px;
-        word-break: break-word;
-      }
-    }
+  .contactInfo {
+    margin: 10px 0; /* 링크 간격 추가 */
   }
 
   .reachOut__divider {
@@ -101,29 +73,7 @@
         display: none;
 
         @media (max-width: 800px) {
-          display: block;
-        }
-
-        &:nth-child(1) {
-          height: 2px;
-        }
-        &:nth-child(2) {
-          height: 3px;
-        }
-        &:nth-child(3) {
-          height: 6px;
-        }
-        &:nth-child(4) {
-          height: 10px;
-        }
-        &:nth-child(5) {
-          height: 15px;
-        }
-        &:nth-child(6) {
-          height: 20px;
-        }
-        &:nth-child(7) {
-          height: 30px;
+          display: block; /* 작은 화면에서만 표시 */
         }
       }
     }
