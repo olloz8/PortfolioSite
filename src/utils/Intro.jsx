@@ -20,7 +20,7 @@ const INTRO_FIRST = [
             <>
                 "전공 지식을 바탕으로 여러 프로젝트를 성공적으로 수행한 경험이 있습니다. <br />
                 이를 통해 다양한 환경에서도 유연하게 적용할 수 있는 실무 기술과 문제 해결 능력을 갖추게 되었습니다."
-                </>
+            </>
         ),
     }
 ];
@@ -32,7 +32,7 @@ const INTRO_BOTTOM = [
             <>
                 어려운 문제가 눈앞에 닥친다 해도 <br />
                 포기하지 않고 문제 해결을 위한 노력에 늘 최선을 다해왔습니다.
-                </>
+            </>
         ),
     },
     {
@@ -87,7 +87,7 @@ const Intro = () => {
             if (rect.top < windowHeight && rect.bottom >= 0) {
                 setIsVisible(true);
             } else {
-                setIsVisible(false); // 다시 사라지게 하고 싶다면 이 부분을 추가
+                setIsVisible(false);
             }
         };
 
@@ -99,19 +99,23 @@ const Intro = () => {
         <div className="intro-container">
             <section id="intro">
                 {/* INTRO_FIRST Section */}
-                {INTRO_FIRST.map(item => (
-                    <div key={item.id} className="intro-section">
-                        <p>{item.p}</p>
-                        <strong>{item.strong}</strong>
-                    </div>
-                ))}
+                <div className="intro-section">
+                    {INTRO_FIRST.map(item => (
+                        <div key={item.id} className="intro-text">
+                            <p>{item.p}</p>
+                            <strong>{item.strong}</strong>
+                        </div>
+                    ))}
+                </div>
 
                 {/* INTRO_BOTTOM Section */}
-                {INTRO_BOTTOM.map(item => (
-                    <div key={item.id} className="intro-section">
-                        <p>{item.p}</p>
-                    </div>
-                ))}
+                <div className="intro-bottom">
+                    {INTRO_BOTTOM.map(item => (
+                        <div key={item.id} className="intro-text">
+                            <p>{item.p}</p>
+                        </div>
+                    ))}
+                </div>
 
                 {/* SUB_KEYWORD Section */}
                 <div className="sub-keywords">
@@ -140,6 +144,5 @@ const Intro = () => {
         </div>
     );
 };
-
 
 export default Intro;

@@ -5,8 +5,31 @@
   padding-top: 100px; // 헤더 크기에 맞게 여백 설정 (조정 가능)
 }
 
+.portfolio-intro {
+  margin-bottom: 200px; // 원하는 간격으로 조정
+}
+
+.project-title {
+  margin-top: 40px; // 제목 위 여백
+  margin-bottom: 0px; // 제목 아래 여백
+  font-size: 1.5em; // 제목 크기
+  color: #333; // 제목 색상
+}
+
+.click-instruction {
+  font-size: 0.5em; // 글자 크기 조정
+  color: #666; // 색상 조정
+  text-align: center; // 중앙 정렬
+  margin-top: 10px; // 위쪽 여백 추가
+  margin-bottom: 100px;
+}
+
+.project-container {
+  margin-top: 20px; // 프로젝트 섹션과 제목 사이 여백
+}
+
 .project {
-  margin-bottom: 40px; // 각 프로젝트 간의 간격
+  margin-bottom: 60px; // 각 프로젝트 간의 간격
   position: relative; // 자식 요소의 절대 위치 설정을 위한 상대 위치
 }
 
@@ -69,7 +92,7 @@
 
 .modal button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #6f674a;
   color: white;
   border: none;
   border-radius: 5px;
@@ -77,5 +100,5 @@
 }
 
 .modal button:hover {
-  background-color: #0056b3;
+  background-color: #6f674a;
 }

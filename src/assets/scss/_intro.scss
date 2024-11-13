@@ -41,6 +41,7 @@ body {
 }
 
 .intro-section {
+  margin-top: 110px;
   margin-bottom: 40px;
   p {
     font-size: 1.2em;
@@ -55,11 +56,11 @@ body {
 }
 
 .sub-keyword {
-  margin-top: 100px; /* 서브 키워드 섹션의 상단 여백 */
+  margin-top: 500px; /* 서브 키워드 섹션의 상단 여백 */
   text-align: center;
   opacity: 0; /* 초기 상태에서 투명하게 설정 */
   transform: translateY(20px); /* 아래로 밀어놓기 */
-  transition: opacity 0.5s, transform 0.5s; /* 부드러운 전환 효과 */
+  transition: opacity 2s, transform 2s; /* 부드러운 전환 효과 */
 
   &.visible {
     opacity: 1; /* 불투명하게 설정 */
@@ -87,7 +88,6 @@ body {
     transform: translateY(0); /* 원래 위치로 복귀 */
   }
 }
-
 
 .keywords-container {
   display: flex;

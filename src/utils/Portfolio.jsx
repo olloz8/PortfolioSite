@@ -20,7 +20,7 @@ const PROJECTS = [
     {
         id: "project_1",
         title: '의류 쇼핑몰',
-        description: '이 프로젝트는 의류 쇼핑몰 웹사이트입니다. 사용한 기술은 JAVA, JS, JDBC, MYSQL, Spring Boot입니다.',
+        description: '이 프로젝트는 의류 쇼핑몰 웹사이트입니다. 사용한 기술은 JAVA, JS, JDBC, MYSQL, Spring Boot입니다. ',
         image: project_1,
     },
     {
@@ -67,32 +67,37 @@ const Portfolio = () => {
         <div>
             <section id="portfolio">
                 {/* 포트폴리오 소개 섹션 */}
-                {PORTFOLIO_INTRO.map(item => (
-                    <div key={item.id}>
-                        <p>{item.p}</p>
-                        <strong>{item.strong}</strong>
-                    </div>
-                ))}
+                <div className="portfolio-intro">
+                    {PORTFOLIO_INTRO.map(item => (
+                        <div key={item.id}>
+                            <p>{item.p}</p>
+                            <strong>{item.strong}</strong>
+                        </div>
+                    ))}
+                </div>
 
                 {/* 프로젝트 섹션 */}
-                <h2>나의 프로젝트</h2>
-                {PROJECTS.map(item => (
-                    <div key={item.id} className="project">
-                        <div className="project-description" onClick={() => handleImageClick(item)}>
-                            <h3>{item.title}</h3>
-                            {/* 설명을 여기서 제거 */}
-                        </div>
-                        {item.image && (
-                            <div className="image" onClick={() => handleImageClick(item)}>
-                                <img
-                                    src={item.image}
-                                    alt={item.title}
-                                    className="project-image"
-                                />
+                <h2 className="project-title">나의 프로젝트</h2>
+                <p className="click-instruction">(이미지를 클릭해주세요.)</p>
+                <div className="project-container">
+                    {PROJECTS.map(item => (
+                        <div key={item.id} className="project">
+                            <div className="project-description" onClick={() => handleImageClick(item)}>
+                                <h3>{item.title}</h3>
                             </div>
-                        )}
-                    </div>
-                ))}
+                            {item.image && (
+                                <div className="image" onClick={() => handleImageClick(item)}>
+                                    <img
+                                        src={item.image}
+                                        alt={item.title}
+                                        className="project-image"
+                                    />
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+
                 {modalData && (
                     <Modal
                         title={modalData.title}
