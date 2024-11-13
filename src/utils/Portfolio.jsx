@@ -31,13 +31,22 @@ const PROJECTS = [
     },
 ];
 
-const Modal = ({ title, description, onClose }) => {
+const Modal = ({ title, description, image, onClose }) => {
     return (
         <div className="modal-overlay">
             <div className="modal">
-                <h3>{title}</h3>
-                <p>{description}</p>
-                <button onClick={onClose}>닫기</button>
+                <div className="modal-content">
+                    <div className="modal-image">
+                        <img src={image} alt={title} />
+                    </div>
+                    <div className="modal-description">
+                        <h3>{title}</h3>
+                        <p>{description}</p>
+                        <div className="modal-button-container">
+                            <button onClick={onClose}>닫기</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
@@ -69,7 +78,10 @@ const Portfolio = () => {
                 <h2>나의 프로젝트</h2>
                 {PROJECTS.map(item => (
                     <div key={item.id} className="project">
-                        <h3>{item.title}</h3>
+                        <div className="project-description" onClick={() => handleImageClick(item)}>
+                            <h3>{item.title}</h3>
+                            {/* 설명을 여기서 제거 */}
+                        </div>
                         {item.image && (
                             <div className="image" onClick={() => handleImageClick(item)}>
                                 <img
@@ -85,6 +97,7 @@ const Portfolio = () => {
                     <Modal
                         title={modalData.title}
                         description={modalData.description}
+                        image={modalData.image}
                         onClose={handleCloseModal}
                     />
                 )}
