@@ -1,46 +1,58 @@
-#intro_top {
-  background-color: #f9f9f9; // 배경색
-  padding: 40px 20px; // 패딩
-  text-align: center; // 중앙 정렬
+// _portfolio.scss
 
-  p {
-    font-size: 1.2em; // 기본 폰트 크기
-    line-height: 1.5; // 줄 간격
-    margin: 10px 0; // 마진
-  }
-
-  strong {
-    display: block;
-    font-size: 1.4em; // 강조 텍스트 크기
-    margin: 20px 0; // 마진
-    color: #333; // 텍스트 색상
-  }
-
-  h3 {
-    font-size: 1.5em; // 키워드 제목 크기
-    margin-top: 30px; // 마진
-    color: #007bff; // 제목 색상
-  }
-
-  span {
-    display: block;
-    font-size: 1em; // 서브 텍스트 크기
-    color: #666; // 서브 텍스트 색상
-    margin-top: 5px; // 마진
-  }
-}
-
-/* _stack.scss */
 #portfolio {
   text-align: center; /* 텍스트 중앙 정렬 */
-  padding-top: 100px;  // 헤더 크기에 맞게 여백을 설정 (조정 가능)
+  padding-top: 100px; // 헤더 크기에 맞게 여백 설정 (조정 가능)
+}
+
+.project {
+  margin-bottom: 40px; // 각 프로젝트 간의 간격
+  position: relative; // 자식 요소의 절대 위치 설정을 위한 상대 위치
 }
 
 .project-image {
-  max-width: 700px; /* 최대 너비를 300px로 설정 (필요에 따라 조정 가능) */
-  width: 100%; /* 부모 요소에 맞게 너비 조정 */
-  height: auto; /* 비율 유지 */
-  margin-top: 20px; /* 이미지 위 여백 */
-  margin-bottom: 20px; /* 이미지 아래에 20px 간격 추가 */
+  max-width: 700px; // 최대 너비를 700px로 설정 (필요에 따라 조정 가능)
+  width: 100%; // 부모 요소에 맞게 너비 조정
+  height: auto; // 비율 유지
+  margin-top: 20px; // 이미지 위 여백
+  margin-bottom: 20px; // 이미지 아래 여백
+  cursor: pointer; // 클릭 가능하게 커서 변경
+}
+// _portfolio.scss
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* 모달이 다른 요소 위에 표시되도록 */
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
 }
 

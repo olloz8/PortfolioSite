@@ -1,5 +1,4 @@
-// Portfolio.jsx
-import React from "react";
+import React, { useState } from "react";
 import '../assets/scss/_portfolio.scss';
 import project_1 from "../assets/img/img1.jpg";
 import project_2 from "../assets/img/img2.jpg";
@@ -32,7 +31,29 @@ const PROJECTS = [
     },
 ];
 
+const Modal = ({ title, description, onClose }) => {
+    return (
+        <div className="modal-overlay">
+            <div className="modal">
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <button onClick={onClose}>닫기</button>
+            </div>
+        </div>
+    );
+};
+
 const Portfolio = () => {
+    const [modalData, setModalData] = useState(null);
+
+    const handleImageClick = (project) => {
+        setModalData(project);
+    };
+
+    const handleCloseModal = () => {
+        setModalData(null);
+    };
+
     return (
         <div>
             <section id="portfolio">
@@ -50,13 +71,23 @@ const Portfolio = () => {
                     <div key={item.id} className="project">
                         <h3>{item.title}</h3>
                         {item.image && (
-                            <div className="image"> {/* 클래스 이름 변경 */}
-                                <img src={item.image} alt={item.title} className="project-image" /> {/* 클래스 추가 */}
+                            <div className="image" onClick={() => handleImageClick(item)}>
+                                <img
+                                    src={item.image}
+                                    alt={item.title}
+                                    className="project-image"
+                                />
                             </div>
                         )}
-                        <p>{item.description}</p>
                     </div>
                 ))}
+                {modalData && (
+                    <Modal
+                        title={modalData.title}
+                        description={modalData.description}
+                        onClose={handleCloseModal}
+                    />
+                )}
             </section>
         </div>
     );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../assets/scss/_intro.scss';
 import { FaUser, FaLightbulb, FaUsers } from 'react-icons/fa';
 
@@ -6,19 +6,34 @@ const INTRO_FIRST = [
     {
         id: "about_me",
         p: '안녕하세요. 문제 해결을 즐기는 개발자 이수민입니다.',
-        strong: '“저는 주어진 목표를 달성하기 위해 끊임없이 나아가며 이를 위해 꾸준히 노력하고 있습니다.”',
+        strong: (
+            <>
+                “저는 주어진 목표를 달성하기 위해 끊임없이 나아가며 <br />
+                이를 위해 꾸준히 노력하고 있습니다.”
+            </>
+        ),
     },
     {
         id: "about_major",
         p: '인하공업전문대학에서 컴퓨터정보과를 전공하였습니다.',
-        strong: '"전공 지식을 바탕으로 여러 프로젝트를 성공적으로 수행한 경험이 있습니다. 이를 통해 다양한 환경에서도 유연하게 적용할 수 있는 실무 기술과 문제 해결 능력을 갖추게 되었습니다."',
+        strong: (
+            <>
+                "전공 지식을 바탕으로 여러 프로젝트를 성공적으로 수행한 경험이 있습니다. <br />
+                이를 통해 다양한 환경에서도 유연하게 적용할 수 있는 실무 기술과 문제 해결 능력을 갖추게 되었습니다."
+                </>
+        ),
     }
 ];
 
 const INTRO_BOTTOM = [
     {
         id: "my_strength",
-        p: '어려운 문제가 눈앞에 닥친다 해도 포기하지 않고 문제 해결을 위한 노력에 늘 최선을 다해왔습니다.',
+        p: (
+            <>
+                어려운 문제가 눈앞에 닥친다 해도 <br />
+                포기하지 않고 문제 해결을 위한 노력에 늘 최선을 다해왔습니다.
+                </>
+        ),
     },
     {
         id: "my_purpose",
@@ -61,6 +76,25 @@ const KEYWORD = [
 ];
 
 const Intro = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const subKeywordSection = document.querySelector('.sub-keywords');
+            const rect = subKeywordSection.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            if (rect.top < windowHeight && rect.bottom >= 0) {
+                setIsVisible(true);
+            } else {
+                setIsVisible(false); // 다시 사라지게 하고 싶다면 이 부분을 추가
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
         <div className="intro-container">
             <section id="intro">
@@ -80,14 +114,17 @@ const Intro = () => {
                 ))}
 
                 {/* SUB_KEYWORD Section */}
-                {SUB_KEYWORD.map(item => (
-
-                    <div key={item.id} className="sub-keyword">
-                        <p>{item.p}</p>
-                        <span>{item.span}</span>
-                    </div>
-                ))}
-
+                <div className="sub-keywords">
+                    {SUB_KEYWORD.map(item => (
+                        <div
+                            key={item.id}
+                            className={`sub-keyword ${isVisible ? 'visible' : ''}`}
+                        >
+                            <p>{item.p}</p>
+                            <span>{item.span}</span>
+                        </div>
+                    ))}
+                </div>
 
                 {/* KEYWORD Section */}
                 <div className="keywords-container">
@@ -103,5 +140,6 @@ const Intro = () => {
         </div>
     );
 };
+
 
 export default Intro;
