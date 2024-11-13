@@ -81,11 +81,13 @@ const Intro = () => {
 
                 {/* SUB_KEYWORD Section */}
                 {SUB_KEYWORD.map(item => (
+
                     <div key={item.id} className="sub-keyword">
                         <p>{item.p}</p>
                         <span>{item.span}</span>
                     </div>
                 ))}
+
 
                 {/* KEYWORD Section */}
                 <div className="keywords-container">
